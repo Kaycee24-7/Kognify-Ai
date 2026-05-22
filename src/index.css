@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-bg: #F8FAFC;
+  --color-brand-sidebar: #FFFFFF;
+  --color-brand-primary: #2563EB;
+  --color-brand-primary-light: #EFF6FF;
+  --color-brand-text: #1E293B;
+  --color-brand-text-muted: #64748B;
+  --color-brand-border: #E2E8F0;
+  --color-brand-accent: #10B981;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-sans antialiased;
+  }
+}
+
+.nav-item-active {
+  @apply bg-brand-primary-light text-brand-primary;
+}
+
+.chat-bubble-user {
+  @apply bg-brand-bg text-brand-text rounded-xl p-4 max-w-[90%] self-end border border-brand-border shadow-sm;
+}
+
+.chat-bubble-ai {
+  @apply bg-brand-bg text-brand-text rounded-xl p-4 max-w-[90%] self-start border border-brand-border shadow-sm;
+}
+
+.step-box {
+  @apply bg-white border border-brand-border border-l-4 border-l-brand-primary p-3 my-3 rounded;
+}
+
+.status-chip {
+  @apply bg-brand-primary-light text-brand-primary px-3.5 py-1.5 rounded-full text-xs font-semibold;
+}
+
+.panel-card {
+  @apply bg-white border border-brand-border rounded-xl p-5 mb-5;
+}
+
